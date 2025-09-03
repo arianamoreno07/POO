@@ -1,90 +1,86 @@
 #include "Prerequisites.h"
-// crear una clase para almacenar los items
+
+// crear una clase Inventario
 class
 	Inventario {
 public:
-	//constructor 
+	// constructor por defecto
 	Inventario() = default;
 
-	// constructor para definir la capacidad
+	// constructor con capacidad
 	Inventario(int capacity) : m_capacity(capacity) {}
 
-	//agregar un item al inventario
-	void agregarItem(int item) {
-
-		//verificar si hay espacio disponible en el inventario
+	// agregar un item
+	void
+		agregarItem(int item) {
 		if (m_numeroItems < m_capacity) {
-
-			m_items[m_numeroItems] = item; //we guarda el item
-			m_numeroItems++; // se aumenta el contador
-			std::cout << "Se agrego el item numero: " << item << std::endl;
-
+			m_items[m_numeroItems] = item;
+			m_numeroItems++;
+			std::cout << "Se agregó el item número: " << item << std::endl;
 		}
 		else {
-			//si el inventario esta lleno
-			std::cout << "Inventario lleno, no se puede agregar " << item << std::endl; //
+			std::cout << "Inventario lleno, no se puede agregar el item: " << item << std::endl;
 		}
 	}
 
-	//mostrar todos los items del inventario
-	void mostrarItems() {
+	// mostrar los items
+	void
+		mostrarItems() const {
 		if (m_numeroItems == 0) {
-
-			std::cout << "El inventario esta vacio" << std::endl;
+			std::cout << "El inventario está vacío" << std::endl;
 		}
 		else {
-			std::cout << "Inventario: " << std::endl;
-
-			//recorre los items y los muestra uno por uno
+			std::cout << "Inventario:" << std::endl;
 			for (int i = 0; i < m_numeroItems; i++) {
-
 				std::cout << "- Item " << m_items[i] << std::endl;
 			}
 		}
-
 	}
 
-	//conseguir la capacidad maxima del inventario
-	int getCapacity() const {
+	// obtener capacidad máxima
+	int
+		getCapacity() const {
 		return m_capacity;
 	}
-	//cambiar la capacidad maxima del inventario
-	void setCapacity(int capacity) {
+
+	// cambiar capacidad máxima
+	void
+		setCapacity(int capacity) {
 		m_capacity = capacity;
 	}
 
+	// obtener número de items actuales
+	int
+		getNumeroItems() const {
+		return m_numeroItems;
+	}
+
 private:
-	int m_items[10]; //arreglo donde se guarda los items
-	int m_numeroItems = 0; // numero actual de items en el inventario
-	int m_capacity = 5; //capacidad maxima por defecto
+	int m_items[10];       // arreglo de items
+	int m_numeroItems = 0; // número actual de items
+	int m_capacity = 5;    // capacidad máxima por defecto
 
 protected:
+	// si quieres usarlo en clases derivadas
 	int m_capacity;
-
 };
 
-// funcion principal del programa. 
+// función principal
+int
+main() {
+	Inventario mochila(5);
 
-int main() {
-	//crear un inventario con capacidad de 10 items
-	Inventario mochila(10);
-
-	//agregar algunos items
 	mochila.agregarItem(1);
-	std::cout << mochila.getCapacity() << std::endl;
 	mochila.agregarItem(2);
-	std::cout << mochila.getCapacity() << std::endl;
 	mochila.agregarItem(3);
-	std::cout << mochila.getCapacity() << std::endl;
 	mochila.agregarItem(4);
-	std::cout << mochila.getCapacity() << std::endl;
 	mochila.agregarItem(5);
+	mochila.agregarItem(6); // intento de agregar más de la capacidad
 
+	mochila.mostrarItems();
 
-	//verificar si la mochila esta llena
-	if (mochila.getCapacity() <= 0) {
-		std::cout << "Inventario lleno. " << std::endl;
-
+	if (mochila.getNumeroItems() >= mochila.getCapacity()) {
+		std::cout << "Inventario lleno." << std::endl;
 	}
 
 	return 0;
