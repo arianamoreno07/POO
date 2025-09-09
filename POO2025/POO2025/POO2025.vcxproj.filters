@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\includes\Prerequisites.h">
+    <ClInclude Include="include\Rectangulo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Prerequisites.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Item.h">
