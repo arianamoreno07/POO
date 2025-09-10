@@ -1,22 +1,20 @@
 #include "Prerequisites.h"
-#include "Rectangulo.h"
-#include "Circulo.h"
+#include "Estudiante.h"
 
 int
 main() {
 
-    Rectangulo rect(4.0, 5.0);
-    std::cout << "Rectangulo - Ancho: " << rect.getAncho() << " Alto: " << rect.getAlto() << std::endl;
-    std::cout << "Area: " << rect.area() << std::endl;
-    std::cout << "Perimetro: " << rect.perimetro() << std::endl;
+    Estudiante Estudiante[5];
+    Estudiante[0].setEstudiante("Juan Perez", 20);
+    Estudiante[1].setEstudiante("Maria Gomez", 22);
+    Estudiante[2].setEstudiante("Carlos Ruiz", 19);
+    Estudiante[3].setEstudiante("Ana Torres", 21);
+    Estudiante[4].setEstudiante("Luis Fernandez", 23);
 
-    Circulo cir(5);
-
-    std::cout << "Circulo Diametro: " << cir.getDiametro() << std::endl;
-    std::cout << "Area: " << cir.area() << std::endl;
-    std::cout << "Perimetro: " << cir.perimetro() << std::endl;
-
-    return 0;
+    for (int i = 0; i < 5; ++i) {
+        Estudiante[i].Informacion();
+    }
+    
 
 
     Fecha fecha;
