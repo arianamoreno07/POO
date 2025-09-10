@@ -1,7 +1,6 @@
 #include "Prerequisites.h"
-#include "rectangulo.h"
-
-
+#include "Rectangulo.h"
+#include "Circulo.h"
 
 int
 main() {
@@ -11,9 +10,20 @@ main() {
     std::cout << "Area: " << rect.area() << std::endl;
     std::cout << "Perimetro: " << rect.perimetro() << std::endl;
 
+    Circulo cir(5);
+
+    std::cout << "Circulo Diametro: " << cir.getDiametro() << std::endl;
+    std::cout << "Area: " << cir.area() << std::endl;
+    std::cout << "Perimetro: " << cir.perimetro() << std::endl;
+
+    return 0;
+
+
     Fecha fecha;
     fecha.getFecha();
     std::cin.get();
+
+    
 
 
     return 0;

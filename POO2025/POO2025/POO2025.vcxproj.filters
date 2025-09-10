@@ -27,6 +27,9 @@
     <ClInclude Include="include\Inventory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Circulo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
