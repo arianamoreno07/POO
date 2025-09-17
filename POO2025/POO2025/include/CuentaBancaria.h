@@ -3,34 +3,36 @@
 
 class CuentaBancaria {
 
-public:
-	std:: string propietario;
+public: 
+	CuentaBancaria(std::string propietario, int numCuenta, double saldoInicial) :
+		m_propietario(propietario), m_numeroCuenta(numCuenta), m_saldo(saldoInicial) {
+	}
+	~CuentaBancaria() = default;
 
-	CuentaBancaria(std::string propietario, int m_numerodeCuenta, double saldoInicial) {
-
-		this->propietario = propietario;
-		this->m_numerodeCuenta = m_numerodeCuenta;
-		this->m_saldo = saldoInicial;
+	void 
+		consultarSaldo() {
+		std::cout << "Saldo actual de " << m_propietario
+			<< "(Cuenta " << m_numeroCuenta << "): " << m_saldo << std::endl;
 	}
 
-	void consultarSaldo() {
-		std::cout << "El saldo de " << propietario << "es: $" << m_saldo << std::endl;
-		std::cout << "Interes calcular: $" << calcularInteres() << std::endl;
-	}
-
-
-protected:
-	int m_numerodeCuenta;
-	void transaccionInterna(double monto) {
-		m_saldo += monto;
-		std::cout << "Transaccion realizada, Nuevo saldo: " << m_saldo << std::endl;
+	void 
+		mostrarInteresCalculado() {
+		double tasaInteres = 5.0; 
+		double interes = calcularInteres(tasaInteres);
+		std::cout << "Interes calculado al " << tasaInteres << "% sobre el saldo de "
+			<< m_saldo << "es: " << interes << std::endl; 
 	}
 
 private: 
-	double m_saldo;
-	double calcularInteres() {
-		return m_saldo * 0.05;
+	double 
+		calcularInteres(double tasaInteres) {
+		return m_saldo * tasaInteres / 100.0;
 	}
-
+public:
+	std:: string m_propietario;
+protected: 
+	int m_numeroCuenta;
+private: 
+	double m_saldo;
 
 };
