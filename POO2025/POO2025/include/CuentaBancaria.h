@@ -11,28 +11,27 @@ public:
 
     ~CuentaBancaria() = default;
 
-    // Getter del propietario
+    
     std::string getPropietario() const {
         return m_propietario;
     }
 
-    // Getter del número de cuenta
+  
     int getNumeroCuenta() const {
         return m_numeroCuenta;
     }
 
-    // Getter del saldo (solo lectura)
     double consultarSaldo() const {
         return m_saldo;
     }
 
-    // Mostrar saldo en consola
+    
     void mostrarSaldo() const {
         std::cout << "Saldo actual de " << m_propietario
             << " (Cuenta " << m_numeroCuenta << "): " << m_saldo << std::endl;
     }
 
-    // Métodos para modificar saldo
+   
     void depositar(double monto) {
         if (monto > 0) {
             m_saldo += monto;
@@ -47,7 +46,7 @@ public:
         return false;
     }
 
-    // Mostrar interés calculado
+    
     void mostrarInteresCalculado() const {
         double tasaInteres = 5.0; // Tasa de interés del 5%
         double interes = calcularInteres(tasaInteres);

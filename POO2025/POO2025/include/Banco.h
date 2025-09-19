@@ -3,16 +3,63 @@
 #include "CuentaBancaria.h"
 #include "UsuarioBancario.h"
 
+/* @class Banco
+ * @brief Representa un banco que maneja usuarios, cuentas y operaciones financieras.
+ * Esta clase permite crear nuevos usuarios, realizar transferencias entre cuentas,
+ * aplicar compras y calcular cashback según el tipo de comercio o la tasa del banco.*/
+
 class Banco {
 public:
+
+    /* @brief Constructor de la clase Banco.
+     * @param cashback Tasa de cashback por defecto aplicada a las compras (1% por defecto).*/
     Banco(double cashback = 0.01) : cashbackRate(cashback) {}
+
+    // * @brief Destructor de la clase Banco.
     ~Banco() = default;
 
+
+    /* @brief Crea un nuevo usuario bancario con una cuenta existente.
+     * @param cuenta Objeto CuentaBancaria que se asignará al usuario.
+     * @return UsuarioBancario creado con la cuenta proporcionada.*/
     UsuarioBancario nuevoUsuario(CuentaBancaria cuenta) {
         UsuarioBancario usuario(cuenta);
         return usuario;
     }
 
+
+    /* @brief Calcula el cashback según el tipo de comercio y monto.
+     * @param comercio Tipo de comercio (TRADE) donde se realiza la compra.
+     * @param _monto Monto de la compra.
+     * @return Cantidad de dinero devuelta como cashback.*/
+    double cashback(TRADE comercio, double _monto) {
+
+        double retorno = 0.0;
+        switch (comercio) {
+        case TELECOMUNICACIONES: 
+            retorno = _monto * 0.01; // 1% de cashback
+            break;
+        case RESTAURANTES:
+            retorno = _monto * 0.02; // 2% de cashback
+            break;
+        case FARMACIAS:
+            retorno = _monto * 0.03; // 3% de cashback
+            break;
+        case SUPERMERCADOS: 
+            retorno = _monto * 0.01; // 1% de cashback
+            break;
+        default:
+            retorno = 0.0;
+            break;
+        }
+        return retorno;
+    }
+
+    /*@brief Realiza una transferencia de dinero entre dos usuarios.
+    * @param cuentaOrigen Usuario que envía el dinero.
+    * @param cuentaDestino Usuario que recibe el dinero.
+    * @param monto Cantidad a transferir.
+    * @param noRef Número de referencia de la transacción.*/
     void realizarTransferencia(UsuarioBancario& cuentaOrigen,
         UsuarioBancario& cuentaDestino,
         double monto,
@@ -31,6 +78,12 @@ public:
         }
     }
 
+
+    /* @brief Realiza una compra para un usuario y aplica cashback.
+     * @param usuario Usuario que realiza la compra.
+     * @param descripcion Concepto o descripción de la compra.
+     * @param monto Monto de la compra.
+     * @param noRef Número de referencia de la transacción.*/
     void realizarCompra(UsuarioBancario& usuario,
         const std::string& descripcion,
         double monto,
@@ -56,5 +109,5 @@ public:
     }
 
 private:
-    double cashbackRate;
+    double cashbackRate;  // Tasa de cashback aplicada a las compras del banco.
 };

@@ -33,5 +33,19 @@ struct Fecha {
 
 };
 
+/** @enum TRADE
+ * @brief Tipos de comercio para aplicar cashback en las compras.
+ * Este enumerador se utiliza para identificar el tipo de comercio en 
+ * el que se realiza una compra, lo cual permite calcular el cashback
+ * correspondiente según la categoría.*/
+enum
+	TRADE {
+	TELECOMUNICACIONES = 1,
+	RESTAURANTES = 2,
+	FARMACIAS = 3,
+	SUPERMERCADOS = 4
+};
+
+
 
 

@@ -62,27 +62,54 @@ int main() {
     estudiante[3].setEstudiante("Ana Torres", 21);
     estudiante[4].setEstudiante("Luis Fernandez", 23);
 
+
+    /* @brief Crear un objeto del banco llamado Santander.
+     * Representa el sistema bancario donde los usuarios podrán operar. */
     Banco Santander;
+
+
+    /* @brief Crear dos usuarios bancarios con cuentas iniciales.
+     * @details 
+     * Ariana:cuenta 0001 con $5000 de saldo inicial.
+     * Ana: cuenta 0002 con $3000 de saldo inicial.*/
     UsuarioBancario Ariana = Santander.nuevoUsuario(CuentaBancaria("Ariana", 0001, 5000.0));
     UsuarioBancario Ana = Santander.nuevoUsuario(CuentaBancaria("Ana", 0002, 3000.0));
 
+
+    /* * @brief Mostrar los saldos de ambos usuarios antes de realizar operaciones.*/
     std::cout << "\n--- Antes de la transferencia ---" << std::endl;
     std::cout << Ariana.getNombre() << " saldo: $" << Ariana.getCuenta().consultarSaldo() << std::endl;
     std::cout << Ana.getNombre() << " saldo: $" << Ana.getCuenta().consultarSaldo() << std::endl;
 
+
+    /* @brief Realizar una transferencia de Ana a Ariana.
+     * @param monto Cantidad a transferir ($1500)
+     * @param noRef Número de referencia de la operación (1709)*/
     std::cout << "\n--- Realizando la transferencia ---" << std::endl;
     Santander.realizarTransferencia(Ana, Ariana, 1500.0, 1709);
 
+
+    /*@brief Mostrar los saldos después de la transferencia.
+     * Esto permite verificar que la operación se haya realizado correctamente.*/
     std::cout << "\n--- Después de la transferencia ---" << std::endl;
     std::cout << Ariana.getNombre() << " saldo: $" << Ariana.getCuenta().consultarSaldo() << std::endl;
     std::cout << Ana.getNombre() << " saldo: $" << Ana.getCuenta().consultarSaldo() << std::endl;
 
+
+    /*@brief Realizar una compra con cashback para Ariana.
+     * @param descripcion Producto comprado ("Shampoo")
+     * @param monto Monto de la compra ($245)
+     * @param noRef Número de referencia de la transacción (1809)
+     * @details La compra disminuye el saldo pero aplica cashback según la tasa del banco.*/
     std::cout << "\n--- Realizando compra con cashback ---" << std::endl;
     Santander.realizarCompra(Ariana, "Shampoo", 245.0, 1809);
 
+
+    /* @brief Mostrar el saldo de Ariana después de la compra con cashback.*/
     std::cout << "\n--- Después de la compra ---" << std::endl;
     std::cout << Ariana.getNombre() << " saldo: $" << Ariana.getCuenta().consultarSaldo() << std::endl;
 
+    /*@brief Esperar a que el usuario presione Enter antes de cerrar el programa.*/
     std::cin.get();
     return 0;
 }
