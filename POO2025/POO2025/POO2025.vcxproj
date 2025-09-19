@@ -163,6 +163,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Banco.h" />
     <ClInclude Include="include\Circulo.h" />
     <ClInclude Include="include\CuentaBancaria.h" />
     <ClInclude Include="include\Estudiante.h" />
@@ -170,6 +171,7 @@
     <ClInclude Include="include\Item.h" />
     <ClInclude Include="include\Prerequisites.h" />
     <ClInclude Include="include\Rectangulo.h" />
+    <ClInclude Include="include\UsuarioBancario.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
