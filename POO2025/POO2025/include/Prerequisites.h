@@ -46,6 +46,28 @@ enum
 	SUPERMERCADOS = 4
 };
 
+/**
+ * @enum Categoria
+ * @brief Enum para definir la categoría del producto.
+ */
+enum class Categoria {
 
+	ALIMENTO,
+	ELECTRONICA,
+	HIGIENE,
+	ROPA,
+	OTRO
+};
+
+
+/**
+ * @enum TipoConsumo
+ * @brief Define si un producto es consumible o no consumible.
+ */
+enum class TipoConsumo {
+
+	CONSUMIBLE,
+	NO_CONSUMIBLE
+};
 
 

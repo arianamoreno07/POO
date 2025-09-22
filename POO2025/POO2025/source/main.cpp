@@ -4,37 +4,38 @@
 #include "Estudiante.h"
 #include "Banco.h"
 #include "UsuarioBancario.h"
+#include "Producto.h"
 // Crear un clase Character
 class
-	Character {
+    Character {
 public:
-	Character() = default;
+    Character() = default;
 
-	Character(int health) : m_health(health) {}
+    Character(int health) : m_health(health) {}
 
-	void
-		rebirth() {
-		if (!isCharacterAlive && m_health <= 0) {
-			std::cout << "El Character a revivido en el Spawn Point" << std::endl;
-			isCharacterAlive = true;
-		}
-	}
+    void
+        rebirth() {
+        if (!isCharacterAlive && m_health <= 0) {
+            std::cout << "El Character a revivido en el Spawn Point" << std::endl;
+            isCharacterAlive = true;
+        }
+    }
 
-	int
-		getHealth() const {
-		return m_health;
-	}
+    int
+        getHealth() const {
+        return m_health;
+    }
 
-	void
-		setHealth(int health) {
-		m_health = health;
-	}
+    void
+        setHealth(int health) {
+        m_health = health;
+    }
 
 private:
-	bool isCharacterAlive = false;
+    bool isCharacterAlive = false;
 
 protected:
-	int m_health;
+    int m_health;
 };
 
 // This function is in charge of being the entry point of the app.
@@ -69,7 +70,7 @@ int main() {
 
 
     /* @brief Crear dos usuarios bancarios con cuentas iniciales.
-     * @details 
+     * @details
      * Ariana:cuenta 0001 con $5000 de saldo inicial.
      * Ana: cuenta 0002 con $3000 de saldo inicial.*/
     UsuarioBancario Ariana = Santander.nuevoUsuario(CuentaBancaria("Ariana", 0001, 5000.0));
@@ -91,7 +92,7 @@ int main() {
 
     /*@brief Mostrar los saldos después de la transferencia.
      * Esto permite verificar que la operación se haya realizado correctamente.*/
-    std::cout << "\n--- Después de la transferencia ---" << std::endl;
+    std::cout << "\n--- Despues de la transferencia ---" << std::endl;
     std::cout << Ariana.getNombre() << " saldo: $" << Ariana.getCuenta().consultarSaldo() << std::endl;
     std::cout << Ana.getNombre() << " saldo: $" << Ana.getCuenta().consultarSaldo() << std::endl;
 
@@ -106,8 +107,20 @@ int main() {
 
 
     /* @brief Mostrar el saldo de Ariana después de la compra con cashback.*/
-    std::cout << "\n--- Después de la compra ---" << std::endl;
+    std::cout << "\n--- Despues de la compra ---" << std::endl;
     std::cout << Ariana.getNombre() << " saldo: $" << Ariana.getCuenta().consultarSaldo() << std::endl;
+
+    //PRODUCTOS//
+
+    Producto shampoo("Shampoo", 1001, Categoria::HIGIENE, "shampoo anti caidas", TipoConsumo::CONSUMIBLE, "21-09-25", "21-09-26", 0.5, 245.0, 500, "KERASTASE PARIS", "ANTICAIDAS");
+
+    Producto Consola("PlayStation 5", 3095, Categoria::ELECTRONICA, "Consola de Videojuegos", TipoConsumo::NO_CONSUMIBLE, "21-09-25", "N/A", 2.2, 12790.0, 0, "Sony", "PS5 EDICION ESTANDAR");
+
+    std::cout << "\nInventario de productos" << std::endl;
+    shampoo.mostrarProducto();
+
+    std::cout << "            " << std::endl;
+    Consola.mostrarProducto();
 
     /*@brief Esperar a que el usuario presione Enter antes de cerrar el programa.*/
     std::cin.get();
