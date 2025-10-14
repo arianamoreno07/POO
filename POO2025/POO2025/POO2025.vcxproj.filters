@@ -16,8 +16,11 @@
     <Filter Include="Header Files\programmingPatterns">
       <UniqueIdentifier>{26664846-cb25-48a5-929e-f53a6e8ad33b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\programmingPatterns\AbstractFactory">
-      <UniqueIdentifier>{2b072776-9953-426a-b6d3-bf75299a129a}</UniqueIdentifier>
+    <Filter Include="Header Files\programmingPatterns\Builder">
+      <UniqueIdentifier>{6f4ed873-bb38-49f7-b7e3-f14eb46302cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Builder">
+      <UniqueIdentifier>{b472e877-a9fd-4677-b16e-14163b3608b4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -60,34 +63,25 @@
     <ClInclude Include="include\programmingPatterns\Vehiculos.h">
       <Filter>Header Files\programmingPatterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\programmingPatterns\AbstractFactory\ProductoA.h">
-      <Filter>Header Files\programmingPatterns\AbstractFactory</Filter>
+    <ClInclude Include="include\programmingPatterns\Builder\Builder.h">
+      <Filter>Header Files\programmingPatterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\programmingPatterns\AbstractFactory\ProductoB.h">
-      <Filter>Header Files\programmingPatterns\AbstractFactory</Filter>
+    <ClInclude Include="include\programmingPatterns\Builder\BuilderConcreto.h">
+      <Filter>Header Files\programmingPatterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\programmingPatterns\AbstractFactory\Mueble.h">
-      <Filter>Header Files\programmingPatterns\AbstractFactory</Filter>
+    <ClInclude Include="include\programmingPatterns\Builder\Producto.h">
+      <Filter>Header Files\programmingPatterns\Builder</Filter>
     </ClInclude>
-    <ClInclude Include="include\programmingPatterns\AbstractFactory\Silla.h">
-      <Filter>Header Files\programmingPatterns\AbstractFactory</Filter>
-    </ClInclude>
-    <ClInclude Include="include\programmingPatterns\AbstractFactory\Mesa.h">
-      <Filter>Header Files\programmingPatterns\AbstractFactory</Filter>
-    </ClInclude>
-    <ClInclude Include="include\programmingPatterns\AbstractFactory\FactoriaMuebles.h">
-      <Filter>Header Files\programmingPatterns\AbstractFactory</Filter>
-    </ClInclude>
-    <ClInclude Include="include\programmingPatterns\AbstractFactory\FactoriaMueblesRusticos.h">
-      <Filter>Header Files\programmingPatterns\AbstractFactory</Filter>
-    </ClInclude>
-    <ClInclude Include="include\programmingPatterns\AbstractFactory\FactoriaMueblesModernos.h">
-      <Filter>Header Files\programmingPatterns\AbstractFactory</Filter>
+    <ClInclude Include="include\programmingPatterns\Builder\Director.h">
+      <Filter>Header Files\programmingPatterns\Builder</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main2.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Builder\BuilderConcreto.cpp">
+      <Filter>Source Files\Builder</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
