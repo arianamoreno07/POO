@@ -170,6 +170,14 @@
     <ClInclude Include="include\Inventory.h" />
     <ClInclude Include="include\Item.h" />
     <ClInclude Include="include\Prerequisites.h" />
+    <ClInclude Include="include\programmingPatterns\AbstractFactory\FactoriaMuebles.h" />
+    <ClInclude Include="include\programmingPatterns\AbstractFactory\FactoriaMueblesModernos.h" />
+    <ClInclude Include="include\programmingPatterns\AbstractFactory\FactoriaMueblesRusticos.h" />
+    <ClInclude Include="include\programmingPatterns\AbstractFactory\Mesa.h" />
+    <ClInclude Include="include\programmingPatterns\AbstractFactory\Mueble.h" />
+    <ClInclude Include="include\programmingPatterns\AbstractFactory\ProductoA.h" />
+    <ClInclude Include="include\programmingPatterns\AbstractFactory\ProductoB.h" />
+    <ClInclude Include="include\programmingPatterns\AbstractFactory\Silla.h" />
     <ClInclude Include="include\programmingPatterns\factoryMethod.h" />
     <ClInclude Include="include\programmingPatterns\MiSingleton.h" />
     <ClInclude Include="include\programmingPatterns\RegistroActividad.h" />
