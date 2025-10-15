@@ -180,6 +180,8 @@
     <ClInclude Include="include\programmingPatterns\Builder\Producto.h" />
     <ClInclude Include="include\programmingPatterns\factoryMethod.h" />
     <ClInclude Include="include\programmingPatterns\MiSingleton.h" />
+    <ClInclude Include="include\programmingPatterns\Prototype\Prototype.h" />
+    <ClInclude Include="include\programmingPatterns\Prototype\PrototypeConcreto.h" />
     <ClInclude Include="include\programmingPatterns\RegistroActividad.h" />
     <ClInclude Include="include\programmingPatterns\Vehiculos.h" />
     <ClInclude Include="include\Rectangulo.h" />

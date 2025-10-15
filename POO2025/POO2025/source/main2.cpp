@@ -1,22 +1,22 @@
-#include "programmingPatterns/Builder/Director.h"
-#include "programmingPatterns/Builder/ConstructorPizzaHawaiana.h"
-#include "programmingPatterns/Builder/ConstructorPizzaVegetariana.h"
+#include "Prerequisites.h"
+#include "programmingPatterns\Prototype\Prototype.h"
+#include "programmingPatterns\Prototype\PrototypeConcreto.h"
+
 
 
 int main() {
-    Director director;
+	Prototype* original = new PrototypeConcreto();
+	original->config("Original");
 
-    // Pizza Hawaiana
-    ConstructorPizzaHawaiana constructorHawaiana;
-    director.construirPizza(&constructorHawaiana);
-    Pizza* hawaiana = constructorHawaiana.getPizza();
-    hawaiana->mostrarPizza();
+	//Clonar el prototipo
+	Prototype* clone = original->clone();
+	clone->config("Clone");
+	//Mostrar informacion
+	original->info();
+	clone->info();
 
-    // Pizza Vegetariana
-    ConstructorPizzaVegetariana constructorVegetariana;
-    director.construirPizza(&constructorVegetariana);
-    Pizza* vegetariana = constructorVegetariana.getPizza();
-    vegetariana->mostrarPizza();
+	delete original;
+	delete clone;
 
     return 0;
 }

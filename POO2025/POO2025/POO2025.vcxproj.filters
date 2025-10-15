@@ -25,6 +25,9 @@
     <Filter Include="Source Files\programmingPatterns">
       <UniqueIdentifier>{7c583103-61b2-470f-befb-0e5e1a90af4b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\programmingPatterns\Prototype">
+      <UniqueIdentifier>{1ebb5bfb-6881-40c0-99bb-cd7efd9a3bea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Rectangulo.h">
@@ -89,6 +92,12 @@
     </ClInclude>
     <ClInclude Include="include\programmingPatterns\Builder\ConstructorPizzaVegetariana.h">
       <Filter>Header Files\programmingPatterns\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Prototype\Prototype.h">
+      <Filter>Header Files\programmingPatterns\Prototype</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Prototype\PrototypeConcreto.h">
+      <Filter>Header Files\programmingPatterns\Prototype</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
