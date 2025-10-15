@@ -1,20 +1,7 @@
 #pragma once
-#include "programmingPatterns\Builder\Builder.h"
+#include "programmingPatterns/Builder/ConstructorPizza.h"
 
-class 
-Director {
-public: 
-	Director(Builder* _builder) : builder(_builder) {}
-	~Director() = default;
-	
-	void 
-	construct () {
-		if (builder) {
-			builder->buildParteA();
-			builder->buildParteB();
-		}
-	}
-
-private: 
-	Builder* builder;
+class Director {
+public:
+    void construirPizza(ConstructorPizza* constructor);
 };

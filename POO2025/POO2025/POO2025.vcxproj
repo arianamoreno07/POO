@@ -172,7 +172,11 @@
     <ClInclude Include="include\Prerequisites.h" />
     <ClInclude Include="include\programmingPatterns\Builder\Builder.h" />
     <ClInclude Include="include\programmingPatterns\Builder\BuilderConcreto.h" />
+    <ClInclude Include="include\programmingPatterns\Builder\ConstructorPizza.h" />
+    <ClInclude Include="include\programmingPatterns\Builder\ConstructorPizzaHawaiana.h" />
+    <ClInclude Include="include\programmingPatterns\Builder\ConstructorPizzaVegetariana.h" />
     <ClInclude Include="include\programmingPatterns\Builder\Director.h" />
+    <ClInclude Include="include\programmingPatterns\Builder\Pizza.h" />
     <ClInclude Include="include\programmingPatterns\Builder\Producto.h" />
     <ClInclude Include="include\programmingPatterns\factoryMethod.h" />
     <ClInclude Include="include\programmingPatterns\MiSingleton.h" />
@@ -182,8 +186,12 @@
     <ClInclude Include="include\UsuarioBancario.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\Builder\BuilderConcreto.cpp" />
     <ClCompile Include="source\main2.cpp" />
+    <ClCompile Include="source\programmingPatterns\Builder\ConstructorPizza.cpp" />
+    <ClCompile Include="source\programmingPatterns\Builder\ConstructorPizzaHawaiana.cpp" />
+    <ClCompile Include="source\programmingPatterns\Builder\ConstructorPizzaVegetariana.cpp" />
+    <ClCompile Include="source\programmingPatterns\Builder\Director.cpp" />
+    <ClCompile Include="source\programmingPatterns\Builder\Pizza.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

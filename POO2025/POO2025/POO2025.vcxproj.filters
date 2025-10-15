@@ -22,6 +22,9 @@
     <Filter Include="Source Files\Builder">
       <UniqueIdentifier>{b472e877-a9fd-4677-b16e-14163b3608b4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\programmingPatterns">
+      <UniqueIdentifier>{7c583103-61b2-470f-befb-0e5e1a90af4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Rectangulo.h">
@@ -75,13 +78,37 @@
     <ClInclude Include="include\programmingPatterns\Builder\Director.h">
       <Filter>Header Files\programmingPatterns\Builder</Filter>
     </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Builder\Pizza.h">
+      <Filter>Header Files\programmingPatterns\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Builder\ConstructorPizza.h">
+      <Filter>Header Files\programmingPatterns\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Builder\ConstructorPizzaHawaiana.h">
+      <Filter>Header Files\programmingPatterns\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Builder\ConstructorPizzaVegetariana.h">
+      <Filter>Header Files\programmingPatterns\Builder</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Builder\BuilderConcreto.cpp">
-      <Filter>Source Files\Builder</Filter>
+    <ClCompile Include="source\programmingPatterns\Builder\Pizza.cpp">
+      <Filter>Source Files\programmingPatterns</Filter>
+    </ClCompile>
+    <ClCompile Include="source\programmingPatterns\Builder\ConstructorPizza.cpp">
+      <Filter>Source Files\programmingPatterns</Filter>
+    </ClCompile>
+    <ClCompile Include="source\programmingPatterns\Builder\ConstructorPizzaHawaiana.cpp">
+      <Filter>Source Files\programmingPatterns</Filter>
+    </ClCompile>
+    <ClCompile Include="source\programmingPatterns\Builder\ConstructorPizzaVegetariana.cpp">
+      <Filter>Source Files\programmingPatterns</Filter>
+    </ClCompile>
+    <ClCompile Include="source\programmingPatterns\Builder\Director.cpp">
+      <Filter>Source Files\programmingPatterns</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

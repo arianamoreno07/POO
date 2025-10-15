@@ -1,21 +1,22 @@
-#include "Prerequisites.h"
-#include "programmingPatterns\Builder\Builder.h"
-#include "programmingPatterns\Builder\Director.h"
-#include "programmingPatterns\Builder\BuilderConcreto.h"
+#include "programmingPatterns/Builder/Director.h"
+#include "programmingPatterns/Builder/ConstructorPizzaHawaiana.h"
+#include "programmingPatterns/Builder/ConstructorPizzaVegetariana.h"
+
 
 int main() {
+    Director director;
 
-	Builder* builder = new BuilderConcreto();
-	Director* director = new Director(builder);
-	director->construct();
-	Producto* producto = builder->getProducto();
-	producto->show();
+    // Pizza Hawaiana
+    ConstructorPizzaHawaiana constructorHawaiana;
+    director.construirPizza(&constructorHawaiana);
+    Pizza* hawaiana = constructorHawaiana.getPizza();
+    hawaiana->mostrarPizza();
 
-	delete producto;
-	delete director;
-	delete builder;
+    // Pizza Vegetariana
+    ConstructorPizzaVegetariana constructorVegetariana;
+    director.construirPizza(&constructorVegetariana);
+    Pizza* vegetariana = constructorVegetariana.getPizza();
+    vegetariana->mostrarPizza();
 
-		return 0;
-
+    return 0;
 }
-
