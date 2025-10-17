@@ -170,6 +170,14 @@
     <ClInclude Include="include\Inventory.h" />
     <ClInclude Include="include\Item.h" />
     <ClInclude Include="include\Prerequisites.h" />
+    <ClInclude Include="include\programmingPatterns\Adapter\Adaptador.h" />
+    <ClInclude Include="include\programmingPatterns\Adapter\Circulo.h" />
+    <ClInclude Include="include\programmingPatterns\Adapter\CirculoAdapter.h" />
+    <ClInclude Include="include\programmingPatterns\Adapter\Cuadrado.h" />
+    <ClInclude Include="include\programmingPatterns\Adapter\CuadradoAdapter.h" />
+    <ClInclude Include="include\programmingPatterns\Adapter\Dibujable.h" />
+    <ClInclude Include="include\programmingPatterns\Adapter\InterfazNueva.h" />
+    <ClInclude Include="include\programmingPatterns\Adapter\InterfazVieja.h" />
     <ClInclude Include="include\programmingPatterns\Builder\Builder.h" />
     <ClInclude Include="include\programmingPatterns\Builder\BuilderConcreto.h" />
     <ClInclude Include="include\programmingPatterns\Builder\ConstructorPizza.h" />

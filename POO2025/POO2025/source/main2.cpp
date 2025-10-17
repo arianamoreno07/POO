@@ -1,36 +1,24 @@
 #include "Prerequisites.h"
-#include "programmingPatterns/Prototype/DocumentoTexto.h"
-#include "programmingPatterns/Prototype/DocumentoImagen.h"
-
+#include "programmingPatterns/Adapter/CuadradoAdapter.h"
+#include "programmingPatterns/Adapter/CirculoAdapter.h"
+#include "programmingPatterns/Adapter/Dibujable.h"
 
 int main() {
-    // Crear prototipos
-    DocumentoTexto docTexto;
-    docTexto.configurar("Documento original");
 
-    DocumentoImagen docImagen;
-    docImagen.configurar("Documento original");
+	Circulo* circulo = new Circulo();
+	Cuadrado* cuadrado = new Cuadrado();
 
-    // Clonar los documentos
-    DocumentoPrototype* clonTexto = docTexto.clonar();
-    DocumentoPrototype* clonImagen = docImagen.clonar();
+	dibujar* dibujoCirculo = new CirculoAdapter(circulo);
+	dibujar* dibujoCuadrado = new CuadradoAdapter(cuadrado);
 
-    // Modificar clones
-    clonTexto->configurar("Documento de texto CLONADO");
-    clonImagen->configurar("Documento de imagen CLONADO");
+	dibujoCirculo->metododibujar();	
+	dibujoCuadrado->metododibujar();
 
-    // Mostrar resultados
-    std::cout << "\n--- Documentos originales ---\n";
-    docTexto.mostrar();
-    docImagen.mostrar();
-
-    std::cout << "\n--- Documentos clonados ---\n";
-    clonTexto->mostrar();
-    clonImagen->mostrar();
-
-    // Liberar memoria
-    delete clonTexto;
-    delete clonImagen;
-
+	delete circulo;
+	delete cuadrado;
+	delete dibujoCirculo;
+	delete dibujoCuadrado;
+	
+    
     return 0;
 }
