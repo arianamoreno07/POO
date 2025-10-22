@@ -186,11 +186,15 @@
     <ClInclude Include="include\programmingPatterns\Builder\Director.h" />
     <ClInclude Include="include\programmingPatterns\Builder\Pizza.h" />
     <ClInclude Include="include\programmingPatterns\Builder\Producto.h" />
+    <ClInclude Include="include\programmingPatterns\Decorator\Azucar.h" />
+    <ClInclude Include="include\programmingPatterns\Decorator\Cafeteria.h" />
     <ClInclude Include="include\programmingPatterns\Decorator\Componente.h" />
     <ClInclude Include="include\programmingPatterns\Decorator\ComponenteConcreto.h" />
+    <ClInclude Include="include\programmingPatterns\Decorator\Condimento.h" />
     <ClInclude Include="include\programmingPatterns\Decorator\Decorator.h" />
     <ClInclude Include="include\programmingPatterns\Decorator\DecoratorConcretoA.h" />
     <ClInclude Include="include\programmingPatterns\Decorator\DecoratorConcretoB.h" />
+    <ClInclude Include="include\programmingPatterns\Decorator\Leche.h" />
     <ClInclude Include="include\programmingPatterns\factoryMethod.h" />
     <ClInclude Include="include\programmingPatterns\MiSingleton.h" />
     <ClInclude Include="include\programmingPatterns\Prototype\Documento.h" />
