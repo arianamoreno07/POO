@@ -34,6 +34,9 @@
     <Filter Include="Header Files\programmingPatterns\Decorator">
       <UniqueIdentifier>{d68a16d2-903d-4cfe-b4c6-043d9fbeaa6d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\programmingPatterns\Composite">
+      <UniqueIdentifier>{842eb2f9-6019-4ff7-bb50-41c0ddea7045}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Rectangulo.h">
@@ -167,6 +170,15 @@
     </ClInclude>
     <ClInclude Include="include\programmingPatterns\Decorator\Azucar.h">
       <Filter>Header Files\programmingPatterns\Decorator</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Composite\Composite.h">
+      <Filter>Header Files\programmingPatterns\Composite</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Composite\Hoja.h">
+      <Filter>Header Files\programmingPatterns\Composite</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Composite\Componente.h">
+      <Filter>Header Files\programmingPatterns\Composite</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
