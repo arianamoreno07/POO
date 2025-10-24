@@ -1,10 +1,15 @@
 #pragma once
 #include "Prerequisites.h"
 
-class Carpeta {
+class 
+Carpeta {
 
 public:
-	void mostrarInfo() {
+	Carpeta() = default;
+	~Carpeta() = default;
+
+	void 
+	mostrar() {
 		std::cout << "Soy una carpeta." << std::endl;
 	}
 };

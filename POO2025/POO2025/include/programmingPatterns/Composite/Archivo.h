@@ -5,9 +5,12 @@ class
 Archivo {
 
 public:
+	Archivo() = default;
+	~Archivo() = default;
 
-	void mostrarInfo() {
-		std::cout << "Soy un archivo." << std::endl;
+	void 
+	mostrar() {
+		std::cout << "Mostrando Archivo." << std::endl;
 	}
 
 };

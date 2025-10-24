@@ -180,6 +180,21 @@
     <ClInclude Include="include\programmingPatterns\Composite\Componente.h">
       <Filter>Header Files\programmingPatterns\Composite</Filter>
     </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Composite\Archivo.h">
+      <Filter>Header Files\programmingPatterns\Composite</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Composite\Carpeta.h">
+      <Filter>Header Files\programmingPatterns\Composite</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Composite\SistemaArchivo.h">
+      <Filter>Header Files\programmingPatterns\Composite</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Composite\SistemaCarpeta.h">
+      <Filter>Header Files\programmingPatterns\Composite</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Composite\Sistema.h">
+      <Filter>Header Files\programmingPatterns\Composite</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main2.cpp">

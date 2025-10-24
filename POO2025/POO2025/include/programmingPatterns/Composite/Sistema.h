@@ -3,8 +3,8 @@
 
 class Sistema {
 
-public: 
+public:
 	virtual void mostrarInfo() = 0;
 	virtual ~Sistema() {}
 
-	};
+}; 
