@@ -37,6 +37,9 @@
     <Filter Include="Header Files\programmingPatterns\Composite">
       <UniqueIdentifier>{842eb2f9-6019-4ff7-bb50-41c0ddea7045}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\programmingPatterns\Proxy">
+      <UniqueIdentifier>{7accc923-b878-4640-abb6-c5fdbcbeaaf4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Rectangulo.h">
@@ -194,6 +197,15 @@
     </ClInclude>
     <ClInclude Include="include\programmingPatterns\Composite\Sistema.h">
       <Filter>Header Files\programmingPatterns\Composite</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Proxy\Proxy.h">
+      <Filter>Header Files\programmingPatterns\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Proxy\SujetoReal.h">
+      <Filter>Header Files\programmingPatterns\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\programmingPatterns\Proxy\Sujeto.h">
+      <Filter>Header Files\programmingPatterns\Proxy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

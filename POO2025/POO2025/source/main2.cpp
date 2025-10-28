@@ -1,20 +1,13 @@
 #include "Prerequisites.h"
-#include "programmingPatterns/Composite/SistemaArchivo.h"
-#include "programmingPatterns/Composite/SistemaCarpeta.h"
+#include "programmingPatterns/Proxy/Proxy.h"
 
 
 int main() {
+	Proxy* proxy = new Proxy();
+	proxy->Request();
+	proxy->Request();
 
-	SistemaArchivo* archivo1 = new SistemaArchivo();
-	SistemaArchivo* archivo2 = new SistemaArchivo();
-	SistemaCarpeta* carpeta1 = new SistemaCarpeta();
-
-	carpeta1->agregarSistema(archivo1);
-	carpeta1->agregarSistema(archivo2);
-
-	carpeta1->mostrarInfo();
-
-	delete carpeta1;
+	delete proxy;
 
 	return 0;
 };

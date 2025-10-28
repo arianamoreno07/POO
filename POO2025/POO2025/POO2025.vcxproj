@@ -211,6 +211,9 @@
     <ClInclude Include="include\programmingPatterns\Prototype\DocumentoTexto.h" />
     <ClInclude Include="include\programmingPatterns\Prototype\Prototype.h" />
     <ClInclude Include="include\programmingPatterns\Prototype\PrototypeConcreto.h" />
+    <ClInclude Include="include\programmingPatterns\Proxy\Proxy.h" />
+    <ClInclude Include="include\programmingPatterns\Proxy\Sujeto.h" />
+    <ClInclude Include="include\programmingPatterns\Proxy\SujetoReal.h" />
     <ClInclude Include="include\programmingPatterns\RegistroActividad.h" />
     <ClInclude Include="include\programmingPatterns\Vehiculos.h" />
     <ClInclude Include="include\Rectangulo.h" />
